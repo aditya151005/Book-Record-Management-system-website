@@ -1,0 +1,44 @@
+<!--7.Create Html
+In templates directory create html file (templates/BRMapp/View_book.html)
+-->
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>View Book Records</title>
+        <link rel="stylesheet" href="{%static 'css/BRMstyle.css' %}">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Book Record Management</h1>
+            <div id="nav">
+                <a href="/BRMAPP/view-books">View All</a>
+                <a href="/BRMAPP/new-book">Add New</a>
+                <a href="/BRMAPP/search-book">Search</a>
+                <a href="/BRMAPP/logout">Logout</a>
+            </div>
+            <h2>Hello,{{username}}</h2> 
+        </div>
+        <div id="main">
+            <h2>View Book Records</h2> 
+            <table>
+                <thead>
+                    <th>Book Title</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                </thead>
+                {%for book in books%}
+                 <tr>
+                 <td>{{book.title}}</td>
+                 <td>{{book.price}}</td>
+                 <td>{{book.author}}</td>
+                 <td>{{book.publisher}}</td>
+                <td><a class='btn' href='/BRMAPP/edit-book?bookid={{book.id}}'>edit</a></td>
+                <td><a class='btn' href='/BRMAPP/delete-book?bookid={{book.id}}'>delete</a></td>
+                 </tr>
+                 {% endfor %}
+            </table>
+        </div>
+    </body>
+    </html>
