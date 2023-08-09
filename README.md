@@ -1,12 +1,12 @@
 # Book-Record-Management-system-website
 
-# This is the web application which is generated using python, Django, html, CSS and Sqlite database .
+This is the web application which is generated using python, Django, html, CSS and Sqlite database .
 
 # Book-Record-Management-system-website work Flow- 
 
-# 1.All the users have credentials(username and password) to login into the system.
+1.All the users have credentials(username and password) to login into the system.
 
-# 2.Allow the end users to do CRUD(create,read,update,delete) operations on books records.  
+2.Allow the end users to do CRUD(create,read,update,delete) operations on books records.  
 
 # Login Page - To login into the system
 
